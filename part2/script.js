@@ -30,6 +30,11 @@ function showQuestion() {
   // 3. Add a class to style it
   // 4. Add an onclick event that calls checkAnswer(index)
   // 5. Add the button to the optionsContainer
+    let buttonOption = document.createElement("button");
+    buttonOption.textContent = option;
+    buttonOption.onclick = function (){checkAnswer(index)};
+    buttonOption.className = "option";
+    optionsContainer.appendChild(buttonOption);
 });
 }
 
@@ -51,6 +56,8 @@ function clearOptions() {
   // HINT
   // 1. Clear the contents of the options container
   // 2. Disable the Next button so users can't skip ahead
+  optionsContainer.textContent = "";
+  nextBtn.disabled = true;
 }
 
 nextBtn.addEventListener("click", () => {
@@ -59,6 +66,15 @@ nextBtn.addEventListener("click", () => {
   // 1. Move to the next question by increasing the question index
   // 2. If there are questions left, show the next one
   // 3. Otherwise, call a function to show the final result
+  currentQuestionIndex++;
+  if(currentQuestionIndex < questions.length)
+  {
+    showQuestion();
+  }
+  else
+  {
+    showResult();
+  }
 });
 
 
