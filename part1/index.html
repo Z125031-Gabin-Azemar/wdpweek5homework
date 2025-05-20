@@ -15,16 +15,36 @@
     }
 
     #quoteBox {
-      background: #fff;
-      padding: 1em;
+      background:
+              white
+              center
+              url("images/papyrus.jpg");
+      background-size: 125%;
+      padding: 1em 3em;
       border-radius: 8px;
       margin-bottom: 1em;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    .quote
+    {
+      font-family: Brush Script MT, Brush Script Std, cursive;
+      font-size: 25px;
+      text-shadow: 2px 2px 5px #271800;
+    }
+    .author
+    {
+      font-family: Brush Script MT, Brush Script Std, cursive;
+      font-size: 25px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #271800;
+    }
+
     button {
       padding: 0.5em 1em;
       font-size: 1rem;
+      width: 25%;
+      align-self: center;
     }
 
     footer {
@@ -40,11 +60,11 @@
 <body>
 
   <h1>Quote generator homework</h1>
-  <h2>Create by Gift sensei </h2> <!-- Change XXXX to your name and student ID-->
+  <h2>Created by Gabin z125031 </h2> <!-- Change XXXX to your name and student ID-->
 
   <div id="quoteBox">
-    <p id="quote">Click the button to get a quote!</p>
-    <p id="author"></p>
+    <p id="quote" class="quote">Click the button to get a quote!</p>
+    <p id="author" class="author"></p>
   </div>
 
   <button id="newQuoteBtn">New Quote</button>
